@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arena Simulator</title>
+
+    <link href="mapgen.css" rel="stylesheet">
+</head>
+<body>
+<h1>Simulator Display</h1>
+
+<div id="map_view"></div>
+<div id="obs_view"></div>
+
+<div id="output-simulator">
+    <h2>Simulator</h2>
+    State: <span id="robot_state"></span> <br />
+    <input type="button" id="load" value="Load">
+    <input type="button" id="use" value="Use">
+    <input type="button" id="commit" value="Commit">
+    <input type="button" id="step" value="Step">
+    <input type="button" id="reset" value="Reset">
+    <textarea id="encode-str"></textarea>
+</div>
+
+<script src="jquery.js"></script>
+<script src="mapgen.js"></script>
+</body>
+</html>

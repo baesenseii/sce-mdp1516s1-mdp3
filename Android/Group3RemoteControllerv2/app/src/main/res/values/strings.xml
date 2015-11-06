@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Grp3 Bt Remote</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_close">Drawer Closed</string>
+    <string name="id">Test</string>
+
+    <string-array name="drawer_list">
+        <item>Disconnect</item>
+        <item>Auto</item>
+        <item>Manual</item>
+        <item>Update</item>
+    </string-array>
+
+    <string name="maze_layout">Maze Layout</string>
+    <string name="id_maze_width">width</string>
+    <string name="id_maze_height">height</string>
+    <string name="title_maze_width">Maze Width</string>
+    <string name="title_maze_height">Maze Height</string>
+    <string-array name="maze_size">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+
+
+</resources>

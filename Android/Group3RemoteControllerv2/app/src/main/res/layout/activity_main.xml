@@ -1,0 +1,573 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControllerActivity"
+    android:orientation="vertical"
+    android:background="#000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="1">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0b86af"
+        app:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/Theme.AppCompat">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ControllerActivity"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#000000">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextLayout"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/abc_action_bar_default_height_material"
+                        android:id="@+id/connectionStatusBox"
+                        android:background="#ffffff"
+                        android:textColor="#000000"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp"
+                        android:text="STATUS: CONNECTED"
+                        android:gravity="right"
+                        />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tilt Switch"
+                        android:id="@+id/switchTilt"
+                        android:checked="false"
+                        android:paddingLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/gridlayoutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTextLayout"
+                    android:paddingLeft="100dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:background="#075771">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="400dp"
+                        android:id="@+id/imgV"
+
+                        />
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200px"
+                android:layout_height="300dp"
+                android:layout_below="@id/gridlayoutLayout"
+                android:background="#0b86af"
+                android:gravity="center_vertical"
+                android:paddingBottom="20dp"
+                android:id="@+id/bottom_leftlayout"
+                android:layout_alignParentBottom="true">
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bluetooth"
+                    android:id="@+id/bluetoothbutton"
+                    android:padding="10dp"
+                    android:background="#075771"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection 7"
+                    android:id="@+id/connection7button"
+                    android:layout_below="@id/bluetoothbutton"
+                    android:padding="10dp"
+                    android:background="#075771"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection 8"
+                    android:id="@+id/connection8button"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="#075771"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/connection7button"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send/Receive"
+                    android:id="@+id/sendreceivebutton"
+                    android:layout_below="@id/connection8button"
+                    android:padding="10dp"
+                    android:background="#075771"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTROL"
+                    android:id="@+id/controlbutton"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="#075771"
+                    android:textColor="#ffffff"
+                    android:layout_below="@id/sendreceivebutton"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+
+                </RelativeLayout>
+
+                <!--Start of blank right layout -->
+            <RelativeLayout
+                android:layout_width="600px"
+                android:layout_height="400dp"
+                android:layout_below="@id/gridlayoutLayout"
+                android:background="#ffffff"
+                android:id="@+id/bottom_rightlayoutblank"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:visibility="invisible">
+
+            </RelativeLayout>
+
+                <!--Start of xy coordinates right layout -->
+
+                <RelativeLayout
+                    android:layout_width="600px"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/gridlayoutLayout"
+                    android:background="#ffffff"
+                    android:id="@+id/bottom_rightlayoutcoordinates"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/xylayout"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Xword"
+                            android:textColor="#000000"
+                            android:text="X : "
+                            android:textSize="30dp"/>
+
+                        <EditText
+                            android:layout_width="300dp"
+                            android:layout_height="50dp"
+                            android:text="Enter X coord here"
+                            android:background="#075771"
+                            android:textColor="#ffffff"
+                            android:id="@+id/Xtextbox"
+                            android:layout_toRightOf="@id/Xword"
+                            android:paddingLeft="10dp"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Yword"
+                            android:textColor="#000000"
+                            android:text="Y : "
+                            android:layout_below="@id/Xword"
+                            android:textSize="30dp"
+                            android:layout_marginTop="20dp"/>
+
+                        <EditText
+                            android:layout_width="300dp"
+                            android:layout_height="50dp"
+                            android:background="#075771"
+                            android:text="Enter Y coord here"
+                            android:id="@+id/Ytextbox"
+                            android:layout_toRightOf="@id/Yword"
+                            android:layout_below="@id/Xtextbox"
+                            android:textColor="#ffffff"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="10dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/xylayout"
+                        android:id="@+id/updatecoordbuttonlayout"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                        android:id="@+id/updatecoordbutton"
+                        android:text="UPDATE"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <!--Start of send receive right layout -->
+
+                <RelativeLayout
+                    android:layout_width="600px"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/gridlayoutLayout"
+                    android:background="#ffffff"
+                    android:id="@+id/bottom_rightlayoutsendreceive"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Received Text: "
+                        android:id="@+id/receivedTextView"
+                        android:layout_marginTop="30dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="WAITING FOR INPUT"
+                        android:id="@+id/receivedTextBox"
+                        android:layout_below="@id/receivedTextView"
+                        android:layout_marginTop="10dp"
+                        android:background="#075771"
+                        android:textColor="#ffffff"
+                        android:padding="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Command: "
+                        android:id="@+id/commandTextView"
+                        android:layout_below="@id/receivedTextBox"
+                        android:layout_marginTop="30dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Enter Command Here "
+                        android:id="@+id/commandTextBox"
+                        android:layout_below="@id/commandTextView"
+                        android:layout_marginTop="10dp"
+                        android:background="#075771"
+                        android:textColor="#ffffff"
+                        android:padding="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="SEND"
+                        android:id="@+id/send_button"
+                        android:layout_below="@id/commandTextBox"
+                        android:layout_marginTop="30dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+
+
+                <!--Start of manual right layout -->
+
+                <RelativeLayout
+                    android:layout_width="600px"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/gridlayoutLayout"
+                    android:background="#ffffff"
+                    android:id="@+id/bottom_rightlayoutmanual"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:visibility="visible"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/controlfirstrowbuttonslayout"
+                        android:gravity="center_horizontal">
+
+
+
+                        <Button
+                            android:id="@+id/balancebutton"
+                            android:text="BALANCE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#075771"
+                            android:padding="10dp"
+                            android:textColor="#fff"
+
+                            />
+
+                        <Button
+                            android:id="@+id/alignbutton"
+                            android:text="ALIGN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#075771"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="10dp"
+                            android:padding="10dp"
+                            android:layout_toRightOf="@id/balancebutton"/>
+
+                        <Button
+                            android:id="@+id/explorebutton"
+                            android:text="EXPLORE"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#075771"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="10dp"
+                            android:padding="10dp"
+                            android:layout_toRightOf="@id/alignbutton"/>
+
+                        <Button
+                            android:id="@+id/fastestsearchbutton"
+                            android:text="FASTEST PATH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#075771"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="10dp"
+                            android:padding="10dp"
+                            android:layout_toRightOf="@id/explorebutton"/>
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/upbuttonlayout"
+                        android:layout_marginTop="60dp">
+
+                    <Button
+                        android:id="@+id/upButton"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:background="@drawable/triangle_button"
+                        android:textColor="#fff"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/upbuttonlayout"
+                    android:id="@+id/leftrightbuttonlayout"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/leftbutton"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:background="@drawable/triangle_button"
+                        android:textColor="#fff"
+                        android:rotation="270"/>
+
+                    <Button
+                        android:id="@+id/rightbutton"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:background="@drawable/triangle_button"
+                        android:textColor="#fff"
+                        android:rotation="90"
+                        android:layout_marginLeft="110dp"
+                        android:layout_toRightOf="@id/leftbutton"/>
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leftrightbuttonlayout"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/downbuttonlayout"
+                    android:gravity="center_horizontal">
+
+                    <Button
+                        android:id="@+id/downbutton"
+                        android:layout_width="66dp"
+                        android:layout_height="66dp"
+                        android:background="@drawable/triangle_button"
+                        android:textColor="#fff"
+                        android:rotation="180"
+                        />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+                <!--Start of right layout auto -->
+
+                <RelativeLayout
+                    android:layout_width="600px"
+                    android:layout_height="400dp"
+                    android:layout_below="@id/gridlayoutLayout"
+                    android:background="#ffffff"
+                    android:id="@+id/bottom_rightlayoutauto"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible"
+
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/autofirstrowbuttonslayout"
+                        android:gravity="center_horizontal">
+
+
+
+                        <Button
+                            android:id="@+id/manualbutton"
+                            android:text="MANUAL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#075771"
+                            android:padding="10dp"
+                            android:textColor="#fff"
+
+                            />
+
+                        <Button
+                            android:id="@+id/autobutton"
+                            android:text="AUTO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#075771"
+                            android:textColor="#fff"
+                            android:layout_marginLeft="60dp"
+                            android:padding="10dp"
+                            android:layout_toRightOf="@id/manualbutton"/>
+
+                    </RelativeLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+
+
+        <ListView
+            android:id="@android:id/list"
+            android:background="@android:color/white"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+</LinearLayout>

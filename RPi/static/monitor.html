@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arena Monitor</title>
+
+    <link href="mapgen.css" rel="stylesheet">
+</head>
+<body>
+<h1>Monitor Display</h1>
+
+<div id="map_view"></div>
+<div id="obs_view" style="display:none"></div>
+
+<div id="output-simulator">
+    <h2>Monitor</h2>
+    State: <span id="robot_state"></span> <br />
+    Time: <span id="run_time"></span> <br />
+    <input type="button" id="c12347" value="Connect7">
+    <input type="button" id="c12348" value="Connect8">
+    <input type="button" id="connect" value="Connect">
+    <input type="button" id="refresh" value="Refresh">
+    <br />
+    <input type="button" id="balance" value="Balance">
+    <input type="button" id="align" value="Align">
+    <input type="button" id="explore" value="Explore">
+    <input type="button" id="shortest" value="Shortest">
+    <br />
+    <input id="hex_command" />
+    <input type="button" id="send" value="Send Command">
+    <br />
+    <br />
+    Map Descriptor:
+    <textarea id="map-desc"></textarea>
+</div>
+
+<script>
+var mode = "monitor";
+</script>
+<script src="jquery.js"></script>
+<script src="mapgen.js"></script>
+</body>
+</html>

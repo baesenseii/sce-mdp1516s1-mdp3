@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/wifidevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wifi Devices"
+        android:background="#666"
+        android:textColor="#fff"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/toggleButton2"/>
+
+    <ListView android:id="@+id/lvwWifiList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wifidevices" />
+
+
+
+</LinearLayout>

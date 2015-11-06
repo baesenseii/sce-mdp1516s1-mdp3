@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/lblPaired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paired Devices"
+        android:background="#666"
+        android:textColor="#fff"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/toggleButton2"/>
+
+    <ListView android:id="@+id/lvwPaired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblPaired" />
+
+    <TextView
+        android:id="@+id/lblAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available Devices"
+        android:background="#666"
+        android:textColor="#fff"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/lvwPaired"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bluetoothlistview"
+        android:layout_below="@+id/lblAvailable"
+        android:layout_above="@+id/receivedTextBox" />
+
+</LinearLayout>
